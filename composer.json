@@ -1,0 +1,52 @@
+{
+    "name": "webpatser/ulid",
+    "description": "A pure PHP library to generate and validate ULIDs (Universally Unique Lexicographically Sortable Identifiers). Crockford Base32 encoded, monotonic, zero external dependencies beyond webpatser/uuid.",
+    "type": "library",
+    "keywords": [
+        "ulid",
+        "identifier",
+        "sortable",
+        "crockford",
+        "base32",
+        "uuid"
+    ],
+    "homepage": "https://github.com/webpatser/ulid",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Christoph Kempen",
+            "email": "christoph@downsized.nl"
+        }
+    ],
+    "require": {
+        "php": "^8.5",
+        "webpatser/uuid": "^2.0"
+    },
+    "require-dev": {
+        "pestphp/pest": "^4.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Webpatser\\Ulid\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Webpatser\\Ulid\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest --coverage"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}

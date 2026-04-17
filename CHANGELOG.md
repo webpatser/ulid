@@ -9,14 +9,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 - Initial release of `webpatser/ulid`
-- `Ulid::generate()` — monotonic ULID generation with 48-bit ms timestamp + 80-bit random
-- `Ulid::fromString()` — parse 26-char Crockford Base32 strings
-- `Ulid::fromBytes()` — create from 16-byte binary
-- `Ulid::isValid()` — validate ULID format
-- `Ulid::fromUuid()` / `$ulid->toUuid()` — bidirectional UUID conversion via `webpatser/uuid`
-- `$ulid->getTimestamp()` — extract embedded timestamp as `DateTimeImmutable`
-- `$ulid->getTimestampMs()` — raw millisecond timestamp
-- `$ulid->toBytes()` — 16-byte binary representation
+- `Ulid::generate()`: monotonic ULID generation with 48-bit ms timestamp + 80-bit random
+- `Ulid::fromString()`: parse 26-char Crockford Base32 strings
+- `Ulid::fromBytes()`: create from 16-byte binary
+- `Ulid::isValid()`: validate ULID format
+- `Ulid::fromUuid()` / `$ulid->toUuid()`: bidirectional UUID conversion via `webpatser/uuid`
+- `$ulid->getTimestamp()`: extract embedded timestamp as `DateTimeImmutable`
+- `$ulid->getTimestampMs()`: raw millisecond timestamp
+- `$ulid->toBytes()`: 16-byte binary representation
 - Crockford Base32 encoding with static lookup tables
 - Monotonic sub-millisecond ordering (increments random portion within same ms)
 - `#[\NoDiscard]` attribute on all factory and query methods

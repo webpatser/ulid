@@ -74,7 +74,7 @@ echo (string) $ulid; // "01ARZ3NDEKTSV4RRFFQ69G5FAV"
 
 ### Binary Storage
 
-ULIDs are 16 bytes in binary — same as UUIDs. Ideal for `BINARY(16)` database columns:
+ULIDs are 16 bytes in binary, same as UUIDs. Ideal for `BINARY(16)` database columns:
 
 ```php
 $binary = $ulid->toBytes();            // 16 bytes for storage
@@ -95,7 +95,7 @@ $ms = $ulid->getTimestampMs();          // e.g., 1773920640936
 - **48-bit millisecond timestamp** (first 10 characters) + **80-bit randomness** (last 16 characters)
 - **Monotonic**: multiple ULIDs within the same millisecond increment the random portion
 - **Lexicographically sortable**: string comparison preserves chronological order
-- **Binary compatible**: 16 bytes, same as UUID — fits in `BINARY(16)` columns
+- **Binary compatible**: 16 bytes, same as UUID; fits in `BINARY(16)` columns
 - **Case insensitive**: parsing accepts both upper and lowercase
 
 ## Features
